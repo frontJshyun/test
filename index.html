@@ -4,7 +4,7 @@
     <script>
       window.test = function () {
         window.document.body.prepend("<span>46378</span>");
-        alert(4532543);
+        alert(String(!!window.WEVERSE_ACCOUNT_WEB.AccountSDK));
         window.WEVERSE_ACCOUNT_WEB.AccountSDK.ready({
           getAccessToken: () => "",
           setAccessToken: (sss) => "",
