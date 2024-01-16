@@ -4,16 +4,19 @@
     <script>
       window.test = function () {
         window.document.body.prepend("<span>46378</span>");
-        alert(String(!!window.WEVERSE_ACCOUNT_WEB));
         window.WEVERSE_ACCOUNT_WEB.AccountSDK.ready({
           getAccessToken: () => "",
           setAccessToken: (sss) => "",
           getRefreshToken: () => "",
           setRefreshToken: (sss) => "",
           getLanguage: () => "en",
-        }).catch(() => {
-          window.document.body.prepend("<span>error</span>");
-        });
+        })
+          .then(() => {
+            window.document.body.prepend("<span>then</span>");
+          })
+          .catch(() => {
+            window.document.body.prepend("<span>error</span>");
+          });
       };
 
       function onload() {
@@ -39,6 +42,7 @@
   </head>
 
   <body onload="onload2()">
+    <button onclick="window.test()">테스트</button>
     <canvas id="canvas" width="3000" height="3000"></canvas>
   </body>
 </html>
