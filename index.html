@@ -1,10 +1,10 @@
 <html>
   <head>
-    <!-- <script src="https://web-account-sdk-qa.weversedev.io/0.1.0/web_account_sdk.min.js"></script> -->
+    <script src="https://web-account-sdk-qa.weversedev.io/0.1.0/web_account_sdk.min.js"></script>
     <script>
       window.test = function () {
         window.document.body.prepend("<span>46378</span>");
-        alert(String(!!window.WEVERSE_ACCOUNT_WEB.AccountSDK));
+        alert(String(!!window.WEVERSE_ACCOUNT_WEB));
         window.WEVERSE_ACCOUNT_WEB.AccountSDK.ready({
           getAccessToken: () => "",
           setAccessToken: (sss) => "",
