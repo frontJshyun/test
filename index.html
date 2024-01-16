@@ -1,6 +1,10 @@
 <html>
   <head>
     <script>
+      window.test = function () {
+        window.document.body.prepend("<span>46378</span>");
+      };
+
       function onload() {
         const canvas = document.getElementById("canvas");
         const ctx = canvas.getContext("2d");
@@ -15,10 +19,15 @@
         ctx.fillStyle = "#000000";
         ctx.fill(path);
       }
+
+      function onload2() {
+        onload();
+        window.test();
+      }
     </script>
   </head>
 
-  <body onload="onload()">
+  <body onload="onload2()">
     <canvas id="canvas" width="3000" height="3000"></canvas>
   </body>
 </html>
