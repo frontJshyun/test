@@ -3,19 +3,19 @@
     <script src="https://web-account-sdk-qa.weversedev.io/0.1.0/web_account_sdk.min.js"></script>
     <script>
       window.test = function () {
-        window.document.body.prepend("<span>46378</span>");
+        window.document.body.prepend("<span>4325423</span>");
         window.WEVERSE_ACCOUNT_WEB.AccountSDK.ready({
-          getAccessToken: () => "",
+          getAccessToken: () => "123",
           setAccessToken: (sss) => "",
-          getRefreshToken: () => "",
+          getRefreshToken: () => "456",
           setRefreshToken: (sss) => "",
           getLanguage: () => "en",
         })
-          .then(() => {
-            window.document.body.prepend("<span>then</span>");
-          })
           .catch(() => {
             window.document.body.prepend("<span>error</span>");
+          })
+          .finally(() => {
+            console.log(1234);
           });
       };
 
