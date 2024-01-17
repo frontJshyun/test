@@ -1,11 +1,11 @@
 <html>
   <head>
-    <script src="https://web-account-sdk-qa.weversedev.io/0.1.0/web_account_sdk.min.js"></script>
+    <script src="https://web-account-sdk-dev.weversedev.io/0.1.0/web_account_sdk.min.js"></script>
     <script>
       window.test = function () {
         window.document.body.prepend("<span>4325423</span>");
         try {
-          window.WEVERSE_ACCOUNT_WEB.AccountSDK.ready({
+          WEVERSE_ACCOUNT_WEB.AccountSDK.ready({
             getAccessToken: () => "123",
             setAccessToken: (sss) => "",
             getRefreshToken: () => "456",
