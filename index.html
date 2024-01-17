@@ -5,7 +5,7 @@
       window.test = function () {
         window.document.body.prepend("<span>4325423</span>");
         try {
-          WEVERSE_ACCOUNT_WEB.AccountSDK.ready({
+          window.WEVERSE_ACCOUNT_WEB.AccountSDK.ready({
             getAccessToken: () => "123",
             setAccessToken: (sss) => "",
             getRefreshToken: () => "456",
