@@ -4,19 +4,15 @@
     <script>
       window.test = function () {
         window.document.body.prepend("<span>4325423</span>");
-        try {
-          window.WEVERSE_ACCOUNT_WEB.AccountSDK.ready({
-            getAccessToken: () => "123",
-            setAccessToken: (sss) => "",
-            getRefreshToken: () => "456",
-            setRefreshToken: (sss) => "",
-            getLanguage: () => "en",
-          }).catch(() => {
-            window.document.body.prepend("<span>error</span>");
-          });
-        } catch (err) {
-          window.document.body.prepend(err.message);
-        }
+        window.WEVERSE_ACCOUNT_WEB.AccountSDK.ready({
+          getAccessToken: () => "123",
+          setAccessToken: (sss) => "",
+          getRefreshToken: () => "456",
+          setRefreshToken: (sss) => "",
+          getLanguage: () => "en",
+        }).catch(() => {
+          window.document.body.prepend("<span>error</span>");
+        });
       };
 
       function onload() {
